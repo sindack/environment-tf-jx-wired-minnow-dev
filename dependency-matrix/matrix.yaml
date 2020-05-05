@@ -11,3 +11,9 @@ dependencies:
   url: https://github.com/sindack/skiapp.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: sindack
+  repo: python-jx-test2
+  url: https://github.com/sindack/python-jx-test2.git
+  version: ""
+  versionURL: ""
