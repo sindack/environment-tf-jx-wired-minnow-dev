@@ -1,0 +1,21 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: sindack
+    provider: github
+    repository: python-jx-test2
+  name: sindack-python-jx-test2
+spec:
+  description: Imported application for sindack/python-jx-test2
+  httpCloneURL: https://github.com/sindack/python-jx-test2.git
+  org: sindack
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: python-jx-test2
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/sindack/python-jx-test2.git
