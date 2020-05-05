@@ -1,0 +1,7 @@
+dependencies:
+- host: github.com
+  owner: sindack
+  repo: jx-python-app-test
+  url: https://github.com/sindack/jx-python-app-test.git
+  version: ""
+  versionURL: ""
