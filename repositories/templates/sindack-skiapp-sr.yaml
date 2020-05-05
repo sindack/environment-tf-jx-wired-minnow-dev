@@ -1,0 +1,23 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  annotations:
+    jenkins.io/last-build-number-for-master: "2"
+  creationTimestamp: null
+  labels:
+    owner: sindack
+    provider: github
+    repository: skiapp
+  name: sindack-skiapp
+spec:
+  description: Imported application for sindack/skiapp
+  httpCloneURL: https://github.com/sindack/skiapp.git
+  org: sindack
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: skiapp
+  scheduler:
+    kind: ""
+    name: ""
+  url: https://github.com/sindack/skiapp
