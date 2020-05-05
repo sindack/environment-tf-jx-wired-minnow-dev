@@ -5,6 +5,6 @@ enableDocker: false
 pipelineUser:
   email: j_ronquillo@u.pacific.edu
   token: vault:tf-jx-wired-minnow/pipelineUser:token
-  username: sample-jx
+  username: sindack
 prow:
   hmacToken: vault:tf-jx-wired-minnow/prow:hmacToken

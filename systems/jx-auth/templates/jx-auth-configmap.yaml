@@ -9,15 +9,15 @@ metadata:
 data:
   gitAuth.yaml: |
     currentserver: "https://github.com"
-    defaultusername: "sample-jx"
+    defaultusername: "sindack"
     pipelineserver: "https://github.com"
-    pipelineusername: "sample-jx"
+    pipelineusername: "sindack"
     servers:
-    - currentuser: "sample-jx"
+    - currentuser: "sindack"
       kind: "github"
       name: "github"
       url: "https://github.com"
       users:
       - apitoken: "vault:tf-jx-wired-minnow/pipelineUser:token"
         bearertoken: ""
-        username: "sample-jx"
+        username: "sindack"

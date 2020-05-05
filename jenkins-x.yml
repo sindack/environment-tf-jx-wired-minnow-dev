@@ -43,9 +43,9 @@ pipelineConfig:
         - name: DEPLOY_NAMESPACE
           value: jx
         - name: GIT_AUTHOR_NAME
-          value: sample-jx
+          value: sindack
         - name: GIT_COMMITTER_NAME
-          value: sample-jx
+          value: sindack
         - name: GIT_AUTHOR_EMAIL
           value: j_ronquillo@u.pacific.edu
         - name: GIT_COMMITTER_EMAIL
