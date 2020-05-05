@@ -1,35 +1,90 @@
+autoUpdate:
+  enabled: false
+  schedule: ""
+bootConfigURL: https://github.com/jenkins-x/jenkins-x-boot-config.git
 cluster:
-  clusterName: ""
-  environmentGitOwner: ""
-  environmentGitPublic: false
-  project: ""
+  clusterName: tf-jx-wired-minnow
+  devEnvApprovers:
+  - sindack
+  environmentGitOwner: sindack
+  gitKind: github
+  gitName: github
+  gitServer: https://github.com
+  namespace: jx
+  project: norse-period-276300
   provider: gke
-  zone: ""
-gitops: true
+  registry: gcr.io
+  vaultName: tf-jx-wired-minnow
+  vaultSAName: tf-jx-wired-minnow-vt
+  zone: us-central1-a
 environments:
-- key: dev
-- key: staging
-- key: production
+- ingress:
+    domain: 34.68.108.101.nip.io
+    externalDNS: false
+    namespaceSubDomain: -jx.
+    tls:
+      email: ""
+      enabled: false
+      production: true
+  key: dev
+  repository: environment-tf-jx-wired-minnow-dev
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: staging
+  repository: environment-tf-jx-wired-minnow-staging
+- ingress:
+    domain: ""
+    externalDNS: false
+    namespaceSubDomain: ""
+    tls:
+      email: ""
+      enabled: false
+      production: false
+  key: production
+  repository: environment-tf-jx-wired-minnow-production
+gitops: true
 ingress:
-  domain: ""
+  domain: 34.68.108.101.nip.io
   externalDNS: false
+  namespaceSubDomain: -jx.
   tls:
     email: ""
     enabled: false
-    production: false
+    production: true
 kaniko: true
-secretStorage: local
+repository: nexus
+secretStorage: vault
 storage:
+  backup:
+    enabled: true
+    url: gs://backup-tf-jx-wired-minnow-cf316efc6f6d
   logs:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://logs-tf-jx-wired-minnow-cf316efc6f6d
   reports:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://reports-tf-jx-wired-minnow-cf316efc6f6d
   repository:
-    enabled: false
-    url: ""
+    enabled: true
+    url: gs://repository-tf-jx-wired-minnow-cf316efc6f6d
+vault:
+  bucket: vault-tf-jx-wired-minnow-cf316efc6f6d
+  key: crypto-key-tf-jx-wired-minnow-cf316efc6f6d
+  keyring: keyring-tf-jx-wired-minnow-cf316efc6f6d
+  name: tf-jx-wired-minnow
+  serviceAccount: tf-jx-wired-minnow-vt
+velero:
+  namespace: velero
+  schedule: 0 * * * *
+  serviceAccount: tf-jx-wired-minnow-vo
+  ttl: 720h0m0s
 versionStream:
-  ref: "master"
+  ref: v1.0.442
   url: https://github.com/jenkins-x/jenkins-x-versions.git
 webhook: prow

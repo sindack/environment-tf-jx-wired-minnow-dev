@@ -1,0 +1,10 @@
+adminUser:
+  password: vault:tf-jx-wired-minnow/adminUser:password
+  username: admin
+enableDocker: false
+pipelineUser:
+  email: j_ronquillo@u.pacific.edu
+  token: vault:tf-jx-wired-minnow/pipelineUser:token
+  username: sample-jx
+prow:
+  hmacToken: vault:tf-jx-wired-minnow/prow:hmacToken
