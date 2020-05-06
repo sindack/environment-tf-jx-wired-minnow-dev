@@ -17,3 +17,9 @@ dependencies:
   url: https://github.com/sindack/python-jx-test2.git
   version: ""
   versionURL: ""
+- host: github.com
+  owner: sindack
+  repo: jenkins-jx-test
+  url: https://github.com/sindack/jenkins-jx-test.git
+  version: ""
+  versionURL: ""
